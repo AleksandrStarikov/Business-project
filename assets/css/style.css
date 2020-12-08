@@ -52,6 +52,22 @@ h1, h2, h3, h4, h5, h6 {
     padding: 19px 0;
     width: 100%;
 
+    background-color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.header.fixed {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .header__inner {
@@ -76,20 +92,77 @@ h1, h2, h3, h4, h5, h6 {
     color: #868686;
     text-decoration: none;
     
-    transition: background 0.2s linear;
+    transition: background-color 0.2s linear;
 }
 
 .nav__link:hover {
     color: #fff;
     background-color: #ffbb42;
     border-radius: 3px;
+}
 
+.nav-toggle {
+    width: 30px;
+    padding: 10px 0;
+    display: none;
+
+    font-size: 0;
+    color: transparent;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+}
+
+.nav-toggle:focus {
+    outline: 0;
+}
+
+.nav-toggle__item {
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #000;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    background-color: #000;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-toggle__item:before {
+    top: -8px;
+}
+
+.nav-toggle__item:after {
+    bottom: -8px;
 }
 
 /* Intro */
 
 .intro {
-    padding-top: 104px;    
+    padding-top: 191px;    
     height: auto;
     text-align: center;
     
@@ -843,12 +916,12 @@ h1, h2, h3, h4, h5, h6 {
     
     /* Header */
     .header {
-        padding: 0;
+        padding: 5px 0 0;
     }
 
     /* Intro */
     .intro {
-        padding-top: 50px;
+        padding-top: 100px;
     }
 
     .intro__title {
@@ -1007,6 +1080,17 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 770px) {
     .nav {
         display: none;
+
+        width: 100%;
+
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 
     /* Slider */
