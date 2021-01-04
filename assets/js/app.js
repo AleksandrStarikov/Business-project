@@ -38,7 +38,16 @@ $(function() {
 
          $("html, body").animate( {
             scrollTop: blockOffset
-        }, 500);
+        }, 700);
     }); 
+
+    /* Menu nav toggle */
+
+    $("#nav__toggle").on("click", function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+        $("#nav").toggleClass("active");
+    });
 
 });
