@@ -33,21 +33,37 @@ $(function() {
             blockId = $this.data('scroll'),
             blockOffset = $(blockId).offset().top;
 
-            $("#nav a").removeClass("active");
             $this.addClass("active");
-
-         $("html, body").animate( {
+            $("#nav, #nav_toggle").removeClass("active");
+           
+            $("html, body").animate( {
             scrollTop: blockOffset
         }, 700);
     }); 
 
     /* Menu nav toggle */
+    var nav = $('#nav');
+        nav_toggle = $('#nav_toggle');
 
-    $("#nav__toggle").on("click", function(event) {
+    nav_toggle.on("click", function(event) {
         event.preventDefault();
 
         $(this).toggleClass("active");
-        $("#nav").toggleClass("active");
+        nav.toggleClass("active");
+    });
+
+    // Slider https://kenwheeler.github.io/slick/
+
+    var slider = $('#slider');
+
+    slider.slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false
     });
 
 });

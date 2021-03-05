@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="./fonts/gotham/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="./fonts/BrandonGrotesqueBold/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <title>Business</title>
 </head>
 <body>
@@ -79,7 +78,7 @@
                     <a href="#" class="nav__link" data-scroll="#contact">Contact Us</a>
                 </nav>
 
-                <button class="nav-toggle" id="nav__toggle" type="button"><span class="nav-toggle__item">Menu</span></button>
+                <button class="nav-toggle" id="nav_toggle" type="button"><span class="nav-toggle__item">Menu</span></button>
             </div> <!-- /.header__inner -->
         </div> <!-- /.container -->
     </header>
@@ -93,7 +92,7 @@
                 <h2 class="intro__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum typesetting</h2>
             </div>
 
-    <!-- Form -->
+            <!-- Form -->
             <form class="form__date" action="#" name="form" method="post">
                 <div class="form__group">
                     <input class="form__input" name="name" type="text" placeholder="Full Name">
@@ -116,10 +115,24 @@
             </form>
 
             <div class="slider">
-                <img class="slider__img" src="./assets/images/laptop.png" alt="">
+                <div class="slider__inner" id="slider">
+                    <div class="slider__col">
                         <div class="slider__item">
                             <img class="slider__photo" src="./assets/images/Slider/slide-1.jpg" alt="">
                         </div>
+                    </div>
+
+                    <div class="slider__col">
+                        <div class="slider__item">
+                            <img class="slider__photo" src="./assets/images/Slider/slide-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slider__col">
+                        <div class="slider__item">
+                            <img class="slider__photo" src="./assets/images/Slider/slide-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div> <!-- /.container -->
     </section> <!-- /.intro -->
@@ -402,14 +415,14 @@
     <footer>
         <div class="container">
             <div class="footer__inner">
-                <nav class="nav">
-                    <a href="#" class="nav__link footer--link">Home</a>
-                    <a href="#" class="nav__link footer--link">Service</a>
-                    <a href="#" class="nav__link footer--link">About us</a>
-                    <a href="#" class="nav__link footer--link">Pricing Table</a>
-                    <a href="#" class="nav__link footer--link">How it work</a>
-                    <a href="#" class="nav__link footer--link">Happy Clients</a>
-                    <a href="#" class="nav__link footer--link">Contact Us</a>
+                <nav class="nav" id="nav">
+                    <a href="#" class="nav__link footer--link" data-scroll="#intro">Home</a>
+                    <a href="#" class="nav__link footer--link" data-scroll="#service">Service</a>
+                    <a href="#" class="nav__link footer--link" data-scroll="#about">About us</a>
+                    <a href="#" class="nav__link footer--link" data-scroll="#pricing">Pricing Table</a>
+                    <a href="#" class="nav__link footer--link" data-scroll="#work">How it work</a>
+                    <a href="#" class="nav__link footer--link" data-scroll="#clients">Happy Clients</a>
+                    <a href="#" class="nav__link footer--link" data-scroll="#contact">Contact Us</a>
                 </nav>
                 <div class="footer__phone"><i class="fas fa-phone-alt"></i>+987 9976 999</div>
                 <div class="footer__social">
